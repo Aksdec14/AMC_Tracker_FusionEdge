@@ -8,7 +8,7 @@ const STEPS = [
         body: "Enter your AMC and warranty information into FusionEdge. Scope, dates, vendor, and SLA — all in one profile.",
         accent: "#4B3080",
         bg: "#f5f2fc",
-        image: "https://picsum.photos/seed/contracts/800/240",
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
         icon: (
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden>
                 <rect x="4" y="2" width="12" height="16" rx="2" stroke="currentColor" strokeWidth="1.6" />
@@ -26,7 +26,7 @@ const STEPS = [
         body: "Select how far in advance you want to be notified before a contract expires. FusionEdge does the rest.",
         accent: "#1A9E92",
         bg: "#f0faf9",
-        image: "https://picsum.photos/seed/timeline/800/240",
+        image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80",
         icon: (
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden>
                 <circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.6" />
@@ -42,7 +42,7 @@ const STEPS = [
         body: "All vendor visits are recorded against the contract. Full service history — always documented, always accessible.",
         accent: "#3A5FAF",
         bg: "#f0f4fc",
-        image: "https://picsum.photos/seed/servicevisit/800/240",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
         icon: (
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden>
                 <path d="M4 10h12M4 6h8M4 14h6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
@@ -59,18 +59,7 @@ const STEPS = [
         body: "When renewal time comes, you have complete vendor performance data to make the right decision — every time.",
         accent: "#B06A08",
         bg: "#fdf7ed",
-        image: "https://picsum.photos/seed/servicevisit/800/240",
-        imageContent: (
-            <svg width="220" height="110" viewBox="0 0 220 110" fill="none" aria-hidden>
-                <rect x="24" y="68" width="22" height="30" rx="4" fill="white" fillOpacity="0.3" />
-                <rect x="54" y="50" width="22" height="48" rx="4" fill="white" fillOpacity="0.5" />
-                <rect x="84" y="36" width="22" height="62" rx="4" fill="white" fillOpacity="0.72" />
-                <rect x="114" y="22" width="22" height="76" rx="4" fill="white" fillOpacity="0.9" />
-                <path d="M35 68 L65 50 L95 36 L125 22" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                <rect x="148" y="32" width="54" height="26" rx="13" fill="white" fillOpacity="0.92" />
-                <text x="175" y="49" textAnchor="middle" fontSize="10" fill="#B06A08" fontFamily="system-ui" fontWeight="800">Renew ✓</text>
-            </svg>
-        ),
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
         icon: (
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden>
                 <path d="M3 13l4-4 3 3 7-7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -103,12 +92,17 @@ function StepCard({ step }: { step: typeof STEPS[0] }) {
 
             {/* Card body */}
             <div className="flex-1 flex flex-col min-w-0">
-                {/* Gradient image strip */}
+                {/* Image strip */}
                 <div
-                    className={`w-full bg-gradient-to-br ${step.image} flex items-center justify-center overflow-hidden flex-shrink-0`}
+                    className="w-full flex items-center justify-center overflow-hidden flex-shrink-0 bg-gray-100"
                     style={{ height: "120px" }}
                 >
-                    {step.imageContent}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img 
+                        src={step.image} 
+                        alt={step.title} 
+                        className="w-full h-full object-cover"
+                    />
                 </div>
 
                 {/* Text content */}
