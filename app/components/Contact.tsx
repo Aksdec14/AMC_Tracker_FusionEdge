@@ -6,13 +6,12 @@ import {
     Phone,
     MapPin,
     Send,
-    Facebook,
-    Linkedin,
-    Instagram,
     CheckCircle,
     AlertCircle,
     Loader2,
 } from "lucide-react";
+
+import { FaFacebook, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -286,9 +285,9 @@ export default function ContactForm() {
                             {/* Social Icons */}
                             <div className="flex gap-3 mt-4">
                                 {[
-                                    { Icon: Facebook, href: "#" },
-                                    { Icon: Linkedin, href: "#" },
-                                    { Icon: Instagram, href: "#" },
+                                    { Icon: FaFacebook, href: "#" },
+                                    { Icon: FaLinkedinIn, href: "#" },
+                                    { Icon: FaInstagram, href: "#" },
                                 ].map(({ Icon, href }, idx) => (
                                     <a
                                         key={idx}
