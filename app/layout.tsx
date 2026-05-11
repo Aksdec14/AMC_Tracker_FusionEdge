@@ -87,6 +87,41 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="/fe_logo.png"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "FusionEdge Digital Asset Register",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              description:
+                "A single, living record of every facility asset across every site. QR code tagging, document management, and multi-site portfolio management — built for facility managers.",
+              offers: {
+                "@type": "Offer",
+                url: "https://fusionedge.io/digital-asset-register",
+              },
+              provider: {
+                "@type": "Organization",
+                name: "FusionEdge",
+                url: "https://fusionedge.io",
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  contactType: "sales",
+                  areaServed: ["IN", "SG"],
+                },
+              },
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
