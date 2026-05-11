@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "FusionEdge",
     images: [
       {
-        url: "/og-amc-tracker.png",
+        url: "/FusionEdge_logo.png",
         width: 1200,
         height: 630,
         alt: "FusionEdge Asset AMC Tracker – Contract & Renewal Management",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Asset AMC Tracker | FusionEdge",
     description:
       "Never let an AMC expire unnoticed. Track contracts, get renewal alerts, and keep every asset under active coverage with FusionEdge.",
-    images: ["/og-amc-tracker.png"],
+    images: ["/FusionEdge_logo.png"],
     creator: "@fusionedge",
   },
   robots: {
