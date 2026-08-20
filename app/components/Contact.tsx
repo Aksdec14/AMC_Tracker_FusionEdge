@@ -252,7 +252,7 @@ export default function ContactForm() {
                                     Contact Information
                                 </h2>
                                 <p className="mb-6 text-sm sm:text-base text-gray-200">
-                                    Have some big idea or brand to develop and need help? We'd
+                                    Have some big idea or brand to develop and need help? We&apos;d
                                     love to hear from you.
                                 </p>
 
@@ -330,6 +330,7 @@ export default function ContactForm() {
                                             type="text"
                                             name="firstName"
                                             placeholder="First Name"
+                                            required
                                             value={formData.firstName}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
@@ -346,6 +347,7 @@ export default function ContactForm() {
                                             type="text"
                                             name="lastName"
                                             placeholder="Last Name"
+                                            required
                                             value={formData.lastName}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
@@ -366,6 +368,7 @@ export default function ContactForm() {
                                             type="text"
                                             name="phone"
                                             placeholder="Phone No."
+                                            required
                                             value={formData.phone}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
@@ -382,6 +385,7 @@ export default function ContactForm() {
                                             type="email"
                                             name="email"
                                             placeholder="Email"
+                                            required
                                             value={formData.email}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
@@ -402,6 +406,7 @@ export default function ContactForm() {
                                         placeholder="Write Message"
                                         rows={3}
                                         maxLength={MESSAGE_MAX}
+                                        required
                                         value={formData.message}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
@@ -445,6 +450,7 @@ export default function ContactForm() {
                                                         type="radio"
                                                         name="subject"
                                                         value={label}
+                                                        required
                                                         checked={formData.subject === label}
                                                         onChange={handleChange}
                                                         className="w-4 h-4 cursor-pointer"
